@@ -7,7 +7,10 @@ interface LoginButtonProps {
   isModal?: boolean;
 }
 
-const LoginButton = ({ children, isModal = false }: LoginButtonProps) => {
+export const LoginButton = ({
+  children,
+  isModal = false,
+}: LoginButtonProps) => {
   const router = useRouter();
   const onClick = () => router.push("/auth/login");
 
@@ -17,5 +20,3 @@ const LoginButton = ({ children, isModal = false }: LoginButtonProps) => {
 
   return <div onClick={() => onClick}>{children}</div>;
 };
-
-export default LoginButton;
