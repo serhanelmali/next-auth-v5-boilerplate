@@ -18,5 +18,5 @@ export const LoginButton = ({
     return <span>Modal to be done</span>;
   }
 
-  return <div onClick={() => onClick}>{children}</div>;
+  return <div onClick={onClick}>{children}</div>;
 };

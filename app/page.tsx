@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex items-center flex-col space-y-6 text-white">
         <h1 className="text-6xl">Authentication</h1>
         <p>Simple Authentication Demo</p>
-        <LoginButton isModal={false}>
+        <LoginButton>
           <Button variant="secondary">Sign In</Button>
         </LoginButton>
       </div>
