@@ -23,20 +23,19 @@ export const CardWrapper = ({
   displaySocial,
 }: CardWrapperProps) => {
   return (
-    <Card className="flex flex-col items-center">
-      <CardHeader>
-        <h1 className="text-3xl font-semibold">{headerLabel}</h1>
+    <Card className="flex flex-col items-center w-[400px]">
+      <CardHeader className="text-center">
+        <h1 className="text-3xl font-semibold">Authentication</h1>
+        <span className="text-sm text-muted-foreground">{headerLabel}</span>
       </CardHeader>
-      <CardContent>
-        <span className="text-sm text-muted-foreground">{children}</span>
-      </CardContent>
+      <CardContent>{children}</CardContent>
       {displaySocial && (
-        <CardFooter>
+        <CardFooter className="w-full">
           <Social />
         </CardFooter>
       )}
       <CardFooter>
-        <BackButton label="Want to create an account?" href="/auth/register" />
+        <BackButton label={backButtonLabel} href={backButtonHref} />
       </CardFooter>
     </Card>
   );

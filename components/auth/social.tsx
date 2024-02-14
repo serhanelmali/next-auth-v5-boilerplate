@@ -8,6 +8,7 @@ export const Social = () => {
   return (
     <div className="flex w-full gap-x-2">
       <Button
+        className="flex-1"
         size="lg"
         variant="outline"
         onClick={() => console.log("google login")}
@@ -15,6 +16,7 @@ export const Social = () => {
         <FcGoogle className="h-5 w-5" />
       </Button>
       <Button
+        className="flex-1"
         size="lg"
         variant="outline"
         onClick={() => console.log("github login")}
