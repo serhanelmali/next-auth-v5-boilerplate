@@ -50,6 +50,23 @@ export const RegisterForm = () => {
           className="space-y-5"
         >
           <FormField
+            name="name"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder="Serhan Elmalı"
+                    disabled={isSubmitting}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
             name="email"
             control={form.control}
             render={({ field }) => (
@@ -66,6 +83,7 @@ export const RegisterForm = () => {
               </FormItem>
             )}
           />
+
           <FormField
             name="password"
             control={form.control}
@@ -87,7 +105,7 @@ export const RegisterForm = () => {
           <FormError message={errorMessage} />
           <FormSuccess message={successMessage} />
           <Button className="w-full" type="submit" disabled={isSubmitting}>
-            Login
+            Register
           </Button>
         </form>
       </Form>
