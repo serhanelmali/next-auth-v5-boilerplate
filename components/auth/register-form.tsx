@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Button } from "@/components/ui/button";
 import { RegisterSchema } from "@/schemas";
-import { login } from "@/actions/login";
+import { register } from "@/actions/register";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 
@@ -30,7 +30,7 @@ export const RegisterForm = () => {
 
   const onSubmit = (values: z.infer<typeof RegisterSchema>) => {
     startTransition(() => {
-      login(values).then((data) => {
+      register(values).then((data) => {
         setErrorMessage(data.error);
         setSuccessMessage(data.success);
       });
